@@ -46,8 +46,8 @@ Visitor can see weather details provided by the [metaweather](https://www.metawe
 The app saves the last selected location in localStorage so on the next visit that will be the default location to display the weather for.
 
 Still some work left:
-[] Making it mobile friendly (responsive)
-[] Add more micro animations for better UX
+- [] Making it mobile friendly (responsive)
+- [] Add more micro animations for better UX
 
 
 
