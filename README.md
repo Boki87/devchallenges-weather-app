@@ -8,8 +8,8 @@
 
 <div align="center">
   <h3>
-    <a href="https://{your-demo-link.your-domain}">
-      Demo
+    <a href="">
+      Demo (coming soon)
     </a>
   </h3>
 </div>
