@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/Boki87/devchallenges-weather-app.git/static/css/main.8c9f03bc.chunk.css",
+    "main.js": "/Boki87/devchallenges-weather-app.git/static/js/main.f12e9b5b.chunk.js",
+    "main.js.map": "/Boki87/devchallenges-weather-app.git/static/js/main.f12e9b5b.chunk.js.map",
+    "runtime-main.js": "/Boki87/devchallenges-weather-app.git/static/js/runtime-main.8c93f1de.js",
+    "runtime-main.js.map": "/Boki87/devchallenges-weather-app.git/static/js/runtime-main.8c93f1de.js.map",
+    "static/js/2.cf4f89af.chunk.js": "/Boki87/devchallenges-weather-app.git/static/js/2.cf4f89af.chunk.js",
+    "static/js/2.cf4f89af.chunk.js.map": "/Boki87/devchallenges-weather-app.git/static/js/2.cf4f89af.chunk.js.map",
+    "index.html": "/Boki87/devchallenges-weather-app.git/index.html",
+    "static/css/main.8c9f03bc.chunk.css.map": "/Boki87/devchallenges-weather-app.git/static/css/main.8c9f03bc.chunk.css.map",
+    "static/js/2.cf4f89af.chunk.js.LICENSE.txt": "/Boki87/devchallenges-weather-app.git/static/js/2.cf4f89af.chunk.js.LICENSE.txt",
+    "static/media/Clear.6e4f36b6.png": "/Boki87/devchallenges-weather-app.git/static/media/Clear.6e4f36b6.png",
+    "static/media/Body.css": "/Boki87/devchallenges-weather-app.git/static/media/Cloud-background.d79dfe61.png",
+    "static/media/LightCloud.edc43777.png": "/Boki87/devchallenges-weather-app.git/static/media/LightCloud.edc43777.png",
+    "static/media/Shower.ea1e199a.png": "/Boki87/devchallenges-weather-app.git/static/media/Shower.ea1e199a.png",
+    "static/media/Sleet.6ef96c5a.png": "/Boki87/devchallenges-weather-app.git/static/media/Sleet.6ef96c5a.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.8c93f1de.js",
+    "static/js/2.cf4f89af.chunk.js",
+    "static/css/main.8c9f03bc.chunk.css",
+    "static/js/main.f12e9b5b.chunk.js"
+  ]
+}
