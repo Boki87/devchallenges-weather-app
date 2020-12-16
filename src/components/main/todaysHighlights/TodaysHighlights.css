@@ -1,0 +1,99 @@
+.todays_highlights {
+    width: 100%;
+    margin-top: 50px;
+}
+
+.todays_highlights > h1 {
+    color: var(--text-light);
+
+}
+
+.todays_highlights__content {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+.todays_highlights__content > div {
+    display: flex;
+    flex-direction: column;
+    flex-basis: calc(50% - 20px);
+}
+
+.todays_highlights__content__item {
+    margin: 20px;
+    min-height: 200px;
+    background: var(--sidebar-bg-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: var(--text-light);
+    padding: 0px 50px;
+}
+
+.todays_highlights__content__item:nth-child(odd) {
+    margin-left: 0px;
+}
+
+.todays_highlights__content__item:nth-child(even) {
+    margin-right: 0px;
+}
+
+.todays_highlights__content__item > .top {
+    font-size: 1.5rem;
+    font-weight: 500;
+    flex:1.5;
+    display: flex;
+    align-items: center;
+}
+.todays_highlights__content__item > .middle {
+    flex: 2;
+    display: flex;
+    align-items: center;
+    font-size: 4rem;
+}
+
+.todays_highlights__content__item > .middle > .main-text {
+    font-weight: 700;
+}
+.todays_highlights__content__item > .middle > .secondary-text {
+    font-size: 2rem;
+    font-weight: 500;
+    margin-top: 20px;
+}
+
+
+.todays_highlights__content__item > .bottom {
+    flex: 2;
+    display: flex;    
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.todays_highlights__content__item__progress {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    width: 100%;
+    position: relative;
+}
+
+.todays_highlights__content__item__progress::-webkit-progress-bar {
+    background-color: #fff;
+    height: 8px;
+    border-radius: 4px;
+}
+
+.todays_highlights__content__item__progress::-webkit-progress-value {
+    background-color: #FFEC65;
+    border-radius: 4px;
+}
+
+.todays_highlights__content__item__progress__scale {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5px;
+}

@@ -1,0 +1,5 @@
+.main__weather_days {
+    color: var(--text-light);
+    width: 100%;
+    display: flex;
+}

@@ -1,0 +1,60 @@
+.sidebar__body__weather_preview {
+    width: 100%;
+    height: 400px;
+    display:flex;
+    align-items:center;
+    justify-content: center;
+    position: relative;
+    background: url(../../../assets/Cloud-background.png) no-repeat center;
+}
+
+.sidebar__body__temperature {
+    display:flex;
+    width:100%;
+    align-items: flex-end;
+    justify-content:center;
+}
+
+.sidebar__body__temperature__degree {
+    font-size: 10rem;
+    font-weight: 100%;
+    color: var(--text-light);
+}
+
+.sidebar__body__temperature__unit {
+    font-size: 3rem;
+    font-weight: 100%;
+    color: var(--text-grey);
+    margin-bottom:10px;
+}
+
+.sidebar__body__weather_description {
+    height: 200px;
+    font-size: 3rem;
+    color: var(--text-grey);
+    display: flex;
+    align-items:center;
+    justify-content: center;    
+    font-weight: 600;
+}
+
+.sidebar__body__date {
+    color: var(--text-grey);
+    font-weight: 500;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sidebar__body__date > span {
+    margin: 0px 5px;
+}
+
+.sidebar__body__location {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 600;
+    color: var(--text-grey);
+    height: 50px;
+}

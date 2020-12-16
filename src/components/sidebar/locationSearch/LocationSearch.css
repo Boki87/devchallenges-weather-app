@@ -1,0 +1,32 @@
+.location_search {
+    width: 460px;
+    height:100%;
+    position: fixed;
+    top: 0; left: 0;
+    background: var(--sidebar-bg-color);
+    display: flex;
+    flex-direction: column;
+    overflow: auto;
+    padding: 0px 20px;
+}
+
+.location_search__header {
+    height: 50px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;      
+    color: var(--text-light);
+    padding: 0px 20px;
+}
+
+.location_search__header > .material-icons {
+    font-size: 2rem;
+    cursor: pointer;    
+}
+
+.location_search__results {
+    flex: 1;
+    width:100%;    
+    overflow: auto;
+    padding: 0px 20px;
+}

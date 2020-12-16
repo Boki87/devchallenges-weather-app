@@ -1,0 +1,63 @@
+.location_search__result_button {
+    height: 50px;
+    width: 100%;    
+    display: flex;
+    align-items: center;
+    padding: 0px 20px;
+    color: var(--text-light);    
+    cursor: pointer;
+    font-size: 1.2rem;
+}
+
+.location_search__result_button:hover {
+    border: 1px solid var(--text-grey);
+}
+
+.location_search__result_button:hover > .material-icons {
+    display: block;
+}
+
+.location_search__result_button__text {
+    flex: 1;
+}
+
+.location_search__result_button > .material-icons {
+    color: var(--text-grey);    
+    display: none;
+}
+
+@-webkit-keyframes rotating /* Safari and Chrome */ {
+    from {
+      -webkit-transform: rotate(0deg);
+      -o-transform: rotate(0deg);
+      transform: rotate(0deg);
+    }
+    to {
+      -webkit-transform: rotate(-360deg);
+      -o-transform: rotate(-360deg);
+      transform: rotate(-360deg);
+    }
+  }
+  @keyframes rotating {
+    from {
+      -ms-transform: rotate(0deg);
+      -moz-transform: rotate(0deg);
+      -webkit-transform: rotate(0deg);
+      -o-transform: rotate(0deg);
+      transform: rotate(0deg);
+    }
+    to {
+      -ms-transform: rotate(-360deg);
+      -moz-transform: rotate(-360deg);
+      -webkit-transform: rotate(-360deg);
+      -o-transform: rotate(-360deg);
+      transform: rotate(-360deg);
+    }
+  }
+  .rotating {
+    -webkit-animation: rotating 2s linear infinite;
+    -moz-animation: rotating 2s linear infinite;
+    -ms-animation: rotating 2s linear infinite;
+    -o-animation: rotating 2s linear infinite;
+    animation: rotating 2s linear infinite;
+  }

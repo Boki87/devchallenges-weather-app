@@ -1,23 +1,44 @@
-import logo from './logo.svg';
-import './App.css';
+import {useEffect} from 'react'
+import Sidebar from './components/sidebar/Sidebar.js'
+import Main from './components/main/Main.js'
+
+import GlobalLoader from './components/GlobalLoader.js'
+
+import {useAppContext} from './components/context'
+
+import './App.css'
 
 function App() {
+
+  const {myLocation, setMyLocation, setWeatherData, isLoading} = useAppContext()
+
+  useEffect(() => {
+    async function getData() {
+      if(localStorage['weather-app-location']) {
+        var cachedLocation = JSON.parse(localStorage['weather-app-location'])
+        setMyLocation(cachedLocation)
+      }
+      try {                        
+          let req = await fetch(`https://thingproxy.freeboard.io/fetch/https://www.metaweather.com/api/location/${cachedLocation.woeid}`)
+          let res = await req.json();            
+          setWeatherData(res.consolidated_weather)                
+      }catch(err) {
+          console.log(err);
+      }
+    }
+
+    getData()
+  }, [])
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className='app'>
+
+      {isLoading && 
+        <GlobalLoader style={{position:'fixed',top:'10px', right:'10px', color: '#fff'}}/>
+      }
+
+      <Sidebar />
+      <Main />
     </div>
   );
 }
