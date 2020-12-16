@@ -10,7 +10,7 @@ import './App.css'
 
 function App() {
 
-  const {myLocation, setMyLocation, setWeatherData, isLoading} = useAppContext()
+  const {setMyLocation, setWeatherData, isLoading} = useAppContext()
 
   useEffect(() => {
     async function getData() {
