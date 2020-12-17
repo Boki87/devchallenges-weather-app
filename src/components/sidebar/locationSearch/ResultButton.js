@@ -1,4 +1,6 @@
 import {useState} from 'react'
+import GlobalLoader from '../../shared/GlobalLoader.js'
+
 
 import './ResultButton.css'
 
@@ -18,9 +20,7 @@ const ResultButton = ({title, onClick}) => {
             </span>    
 
             {loading ? 
-                <span className="material-icons rotating">
-                    cached
-                </span>
+                <GlobalLoader />
                 :
                 <span className="material-icons">
                     chevron_right

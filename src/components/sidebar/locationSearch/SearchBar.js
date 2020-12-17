@@ -16,8 +16,7 @@ const SearchBar = () => {
         setLoading(true)
         try {            
             let req = await fetch(`https://thingproxy.freeboard.io/fetch/https://www.metaweather.com/api/location/search/?query=${searchText}`)
-            let res = await req.json();
-            console.log(res);
+            let res = await req.json();            
             setAvailableLocations(res)            
             setLoading(false)
         }catch(err) {
