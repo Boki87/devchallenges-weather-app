@@ -17,7 +17,9 @@ const LocationSearch = () => {
         setMyLocation(location)
         localStorage['weather-app-location'] = JSON.stringify(location)
         try {            
-            let req = await fetch(`https://www.metaweather.com/api/location/${location.woeid}`)
+            let req = await fetch(`https://www.metaweather.com/api/location/${location.woeid}`,{
+                mode: 'no-cors'
+              })
             let res = await req.json();            
             setWeatherData(res.consolidated_weather)
             closeSidebar()

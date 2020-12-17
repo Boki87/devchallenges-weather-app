@@ -15,7 +15,9 @@ const SearchBar = () => {
         }
         setLoading(true)
         try {            
-            let req = await fetch(`https://www.metaweather.com/api/location/search/?query=${searchText}`)
+            let req = await fetch(`https://www.metaweather.com/api/location/search/?query=${searchText}`,{
+                mode: 'no-cors'
+              })
             let res = await req.json();            
             setAvailableLocations(res)            
             setLoading(false)
