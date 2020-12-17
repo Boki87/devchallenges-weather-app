@@ -20,7 +20,7 @@ function App() {
         setMyLocation(cachedLocation)
       }
       try {                        
-          let req = await fetch(`https://www.metaweather.com/api/location/${cachedLocation.woeid}`)
+          let req = await fetch(`https://thingproxy.freeboard.io/fetch/https://www.metaweather.com/api/location/${cachedLocation.woeid}`)
           let res = await req.json();            
           setWeatherData(res.consolidated_weather)                
           setLoading(false)

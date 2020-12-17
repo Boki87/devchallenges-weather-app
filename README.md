@@ -41,7 +41,7 @@
 
 ## Features
 
-Visitor can see weather details provided by the [metaweather](https://www.metaweather.com/api/) api based on his geo position. Or search for any location and display the weather data.
+Visitor can see weather details provided by the [metaweather](https://thingproxy.freeboard.io/fetch/https://www.metaweather.com/api/) api based on his geo position. Or search for any location and display the weather data.
 
 The app saves the last selected location in localStorage so on the next visit that will be the default location to display the weather for.
 
