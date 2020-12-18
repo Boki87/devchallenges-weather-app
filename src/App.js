@@ -23,8 +23,9 @@ function App() {
         cachedLocation = myLocation
       }
       try {                        
-          let req = await fetch(`https://thingproxy.freeboard.io/fetch/https://www.metaweather.com/api/location/${cachedLocation.woeid}`)
+          let req = await fetch(`https://cors-anywhere.herokuapp.com/https://www.metaweather.com/api/location/${cachedLocation.woeid}`)
           let res = await req.json();            
+          console.log(res);
           setWeatherData(res.consolidated_weather)                
           setLoading(false)
       }catch(err) {

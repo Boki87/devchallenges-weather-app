@@ -16,7 +16,7 @@ const Header = () => {
           navigator.geolocation.getCurrentPosition( async (position) => {            
             try {
                 let {latitude, longitude} = position.coords
-                let req = await fetch(`https://thingproxy.freeboard.io/fetch/https://www.metaweather.com/api/location/search/?lattlong=${latitude},${longitude}`)
+                let req = await fetch(`https://cors-anywhere.herokuapp.com/https://www.metaweather.com/api/location/search/?lattlong=${latitude},${longitude}`)
                 let res = await req.json();
                 setAvailableLocations(res)
                 openSidebar()
