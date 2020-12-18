@@ -32,6 +32,9 @@ const Main = () => {
                 }
                 
             </div>
+            <div className='main__footer'>
+                Bojan Peric @DevChallenges.io
+            </div>
         </div>
     )
 }
