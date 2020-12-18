@@ -1,21 +1,22 @@
 .weather_card {
     flex:1;
     min-width: 160px;
+    max-width: 160px;
     height: 200px;
     display: flex;
     flex-direction: column;
     padding: 10px 30px;
     background: var(--sidebar-bg-color);
-    margin: 0px 10px;
+    margin: 10px 10px;
 }
 
-.weather_card:first-child {
+/* .weather_card:first-child {
     margin-left: 0px;
 }
 
 .weather_card:last-child {
     margin-right: 0px;
-}
+} */
 
 .weather_card__date {
     font-size: 1.1rem;

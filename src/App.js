@@ -10,14 +10,17 @@ import './App.css'
 
 function App() {
 
-  const {setMyLocation, setWeatherData, isLoading, setLoading, setUnit} = useAppContext()
+  const {setMyLocation, myLocation, setWeatherData, isLoading, setLoading, setUnit} = useAppContext()
 
   useEffect(() => {
     async function getData() {
       setLoading(true)
+      var cachedLocation
       if(localStorage['weather-app-location']) {
         var cachedLocation = JSON.parse(localStorage['weather-app-location'])
         setMyLocation(cachedLocation)
+      }else{
+        cachedLocation = myLocation
       }
       try {                        
           let req = await fetch(`https://thingproxy.freeboard.io/fetch/https://www.metaweather.com/api/location/${cachedLocation.woeid}`)
@@ -41,7 +44,7 @@ function App() {
     <div className='app'>
 
       {isLoading && 
-        <GlobalLoader style={{position:'fixed',top:'10px', right:'10px', color: '#fff'}}/>
+        <GlobalLoader style={{position:'fixed',top:'10px', left:'10px', color: '#fff', zIndex: '1000'}}/>
       }
 
       <Sidebar />

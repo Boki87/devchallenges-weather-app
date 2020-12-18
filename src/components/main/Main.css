@@ -2,12 +2,28 @@
     flex: 1;
     background: var(--main-bg-color);
     min-height: 100%;    
+    overflow: auto;
+    padding: 0px 20px;
 }
 
 .main__wrapper {
     max-width: 900px;    
     margin: 0px auto;    
 }
+
+@media screen and (max-width: 500px) {
+
+    .main {
+        flex: none;
+        width: 100%;
+    }
+
+    .main__wrapper {
+        width: 100%;        
+    }
+
+}   
+
 
 .main__units {
     width: 100%;
