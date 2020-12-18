@@ -8,8 +8,8 @@
 
 <div align="center">
   <h3>
-    <a href="">
-      Demo (coming soon)
+    <a href="https://5fdd32f4c492340007aa65d3--elated-khorana-9b10bd.netlify.app/">
+      Demo
     </a>
   </h3>
 </div>
