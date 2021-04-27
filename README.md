@@ -8,7 +8,7 @@
 
 <div align="center">
   <h3>
-    <a href="https://5fdd32f4c492340007aa65d3--elated-khorana-9b10bd.netlify.app/">
+    <a href="https://devchallenges-weather.netlify.app/">
       Demo
     </a>
   </h3>
@@ -24,14 +24,11 @@
 - [How to use](#how-to-use)
 - [Contact](#contact)
 
-
 <!-- OVERVIEW -->
 
 ## Overview
 
 ![screenshot](screenshots/screen1.png)
-
-
 
 ### Built With
 
@@ -46,10 +43,9 @@ Visitor can see weather details provided by the [metaweather](https://thingproxy
 The app saves the last selected location in localStorage so on the next visit that will be the default location to display the weather for.
 
 Still some work left:
+
 - [] Making it mobile friendly (responsive)
 - [] Add more micro animations for better UX
-
-
 
 This application/site was created as a submission to a [DevChallenges](https://devchallenges.io/challenges) challenge. The [challenge](https://devchallenges.io/challenges/mM1UIenRhK808W8qmLWv) was to build an application to complete the given user stories.
 
