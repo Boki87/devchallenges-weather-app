@@ -1,57 +1,61 @@
-import {useAppContext} from '../../context'
-import './LocationSearch.css'
+import { useAppContext } from "../../context";
+import "./LocationSearch.css";
 
-import SearchBar from './SearchBar.js'
-import ResultButton from './ResultButton.js'
+import SearchBar from "./SearchBar.js";
+import ResultButton from "./ResultButton.js";
 
 const LocationSearch = () => {
+  const {
+    setSidebar,
+    availableLocations,
+    setAvailableLocations,
+    setMyLocation,
+    setWeatherData,
+  } = useAppContext();
 
-    const {setSidebar, availableLocations, setAvailableLocations, setMyLocation, setWeatherData} = useAppContext()
+  const closeSidebar = () => {
+    setSidebar(false);
+    setAvailableLocations([]);
+  };
 
-    const closeSidebar = () => {
-        setSidebar(false)
-        setAvailableLocations([])
+  const setLocationAndGetWeather = async (location) => {
+    setMyLocation(location);
+    localStorage["weather-app-location"] = JSON.stringify(location);
+    try {
+      let req = await fetch(
+        `https://api.allorigins.win/raw?url=https://www.metaweather.com/api/location/${location.woeid}`
+      );
+      let res = await req.json();
+      setWeatherData(res.consolidated_weather);
+      closeSidebar();
+      setAvailableLocations([]);
+    } catch (err) {
+      console.log(err);
     }
+  };
 
-    const setLocationAndGetWeather = async (location) => {
-        setMyLocation(location)
-        localStorage['weather-app-location'] = JSON.stringify(location)
-        try {            
-            let req = await fetch(`https://cors-anywhere.herokuapp.com/https://www.metaweather.com/api/location/${location.woeid}`)
-            let res = await req.json();            
-            setWeatherData(res.consolidated_weather)
-            closeSidebar()
-            setAvailableLocations([])
-        }catch(err) {
-            console.log(err);
-        }
-    }
+  return (
+    <div className="location_search">
+      <div className="location_search__header">
+        <span onClick={closeSidebar} className="material-icons">
+          close
+        </span>
+      </div>
 
-    return (
-        <div className='location_search'>
-            <div className='location_search__header'>
-                <span onClick={closeSidebar} className="material-icons">
-                    close
-                </span>
-            </div>
+      <SearchBar />
 
-            <SearchBar />
+      <div className="location_search__results">
+        {availableLocations.map((location) => (
+          <ResultButton
+            onClick={() => setLocationAndGetWeather(location)}
+            title={location.title}
+            woeid={location.woeid}
+            key={location.woeid}
+          />
+        ))}
+      </div>
+    </div>
+  );
+};
 
-
-            <div className='location_search__results'>
-                {
-                    availableLocations.map(location => 
-                        <ResultButton 
-                            onClick={() => setLocationAndGetWeather(location)}
-                            title={location.title} 
-                            woeid={location.woeid} 
-                            key={location.woeid}
-                        />
-                    )
-                }                
-            </div>
-        </div>
-    )
-}
-
-export default LocationSearch
+export default LocationSearch;
